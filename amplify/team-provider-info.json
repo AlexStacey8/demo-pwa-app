@@ -10,6 +10,11 @@
       "StackName": "amplify-demopwaapp-dev-142356",
       "StackId": "arn:aws:cloudformation:eu-west-2:433997775245:stack/amplify-demopwaapp-dev-142356/078d76c0-be86-11ed-bed4-0aa48804ae92",
       "AmplifyAppId": "d1zy8tg7eosz8v"
+    },
+    "categories": {
+      "api": {
+        "demopwaapp": {}
+      }
     }
   }
 }
