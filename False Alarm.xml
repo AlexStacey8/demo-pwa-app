@@ -1,0 +1,513 @@
+<?xml version="1.0"?>
+<h:html
+	xmlns="http://www.w3.org/2002/xforms"
+	xmlns:ev="http://www.w3.org/2001/xml-events"
+	xmlns:h="http://www.w3.org/1999/xhtml"
+	xmlns:jr="http://openrosa.org/javarosa"
+	xmlns:odk="http://www.opendatakit.org/xforms"
+	xmlns:orx="http://openrosa.org/xforms"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<h:head>
+		<h:title>False Alarm</h:title>
+		<model odk:xforms-version="1.0.0">
+			<instance>
+				<data id="False Alarm">
+					<section_1>
+						<FRS_incident_num/>
+						<selected_fire_and_rescue_service/>
+						<selected_station/>
+						<fire_officer_id/>
+						<selected_over_the_border/>
+						<selected_frs_incident_location/>
+						<other_frs_incident_num/>
+					</section_1>
+					<section_2>
+						<time_date_of_call/>
+						<origin_of_call/>
+						<incident_type/>
+						<stop_msg_time_date/>
+						<incident_closed_time_date/>
+					</section_2>
+					<section_3>
+						<selected_what_incident/>
+						<property_involved/>
+						<false_alarm_reason/>
+						<selected_attack_on_frs>no</selected_attack_on_frs>
+					</section_3>
+					<section_4>
+						<location_addressable/>
+						<x_coord/>
+						<y_coord/>
+					</section_4>
+					<section_6>
+						<num_of_officers/>
+						<selected_frs_vehicle_type/>
+						<callsign/>
+						<num_of_crew/>
+						<selected_vehicle_dismount_used>no</selected_vehicle_dismount_used>
+						<time_mobilized/>
+						<time_mobile/>
+						<time_arrived/>
+						<time_available/>
+						<selected_deployed_from/>
+						<selected_equipment_used/>
+					</section_6>
+					<section_10>
+						<selected_current_incident_report_status/>
+					</section_10>
+					<meta>
+						<instanceID/>
+					</meta>
+				</data>
+			</instance>
+			<instance id="fire_and_rescue_service">
+				<root>
+					<item>
+						<label>s1</label>
+						<name>s1</name>
+						<over_the_border>yes</over_the_border>
+					</item>
+					<item>
+						<label>s2</label>
+						<name>s2</name>
+						<over_the_border>yes</over_the_border>
+					</item>
+					<item>
+						<label>s3</label>
+						<name>s3</name>
+						<over_the_border>yes</over_the_border>
+					</item>
+				</root>
+			</instance>
+			<instance id="station">
+				<root>
+					<item>
+						<label>ABCDE</label>
+						<name>abcde</name>
+					</item>
+					<item>
+						<label>FGHIJ</label>
+						<name>fghij</name>
+					</item>
+					<item>
+						<label>KlMNO</label>
+						<name>kimno</name>
+					</item>
+				</root>
+			</instance>
+			<instance id="over_the_border">
+				<root>
+					<item>
+						<label>Yes</label>
+						<name>yes</name>
+					</item>
+					<item>
+						<label>No</label>
+						<name>no</name>
+					</item>
+				</root>
+			</instance>
+			<instance id="call_origin">
+				<root>
+					<item>
+						<label>o1</label>
+						<name>o1</name>
+					</item>
+					<item>
+						<label>o2</label>
+						<name>o2</name>
+					</item>
+					<item>
+						<label>o3</label>
+						<name>o3</name>
+					</item>
+				</root>
+			</instance>
+			<instance id="what_incident">
+				<root>
+					<item>
+						<label>Fire</label>
+						<name>fire</name>
+					</item>
+					<item>
+						<label>Special Service</label>
+						<name>special_service</name>
+					</item>
+					<item>
+						<label>False Alarm</label>
+						<name>false_alarm</name>
+					</item>
+				</root>
+			</instance>
+			<instance id="attack_on_frs">
+				<root>
+					<item>
+						<label>Yes</label>
+						<name>yes</name>
+					</item>
+					<item>
+						<label>No</label>
+						<name>no</name>
+					</item>
+				</root>
+			</instance>
+			<instance id="addressable">
+				<root>
+					<item>
+						<label>Yes</label>
+						<name>yes</name>
+					</item>
+					<item>
+						<label>No</label>
+						<name>no</name>
+					</item>
+				</root>
+			</instance>
+			<instance id="frs_vehicle">
+				<root>
+					<item>
+						<label>VH1</label>
+						<name>vh1</name>
+					</item>
+					<item>
+						<label>VH2</label>
+						<name>vh2</name>
+					</item>
+					<item>
+						<label>VH3</label>
+						<name>vh3</name>
+					</item>
+				</root>
+			</instance>
+			<instance id="vehicle_dismount_used">
+				<root>
+					<item>
+						<label>Yes</label>
+						<name>yes</name>
+					</item>
+					<item>
+						<label>No</label>
+						<name>no</name>
+					</item>
+				</root>
+			</instance>
+			<instance id="deployed_from">
+				<root>
+					<item>
+						<label>Home Station</label>
+						<name>home_station</name>
+					</item>
+					<item>
+						<label>Other Station</label>
+						<name>other_station</name>
+					</item>
+					<item>
+						<label>Other Location</label>
+						<name>other_location</name>
+					</item>
+				</root>
+			</instance>
+			<instance id="equipment_used">
+				<root>
+					<item>
+						<label>Yes</label>
+						<name>yes</name>
+					</item>
+					<item>
+						<label>No</label>
+						<name>no</name>
+					</item>
+				</root>
+			</instance>
+			<instance id="current_incident_report_status">
+				<root>
+					<item>
+						<label>RS1</label>
+						<name>rs1</name>
+					</item>
+					<item>
+						<label>RS2</label>
+						<name>rs2</name>
+					</item>
+					<item>
+						<label>RS3</label>
+						<name>rs3</name>
+					</item>
+				</root>
+			</instance>
+			<bind constraint="string-length(.) &lt;= 50" jr:constraintMsg="Must be between 1 - 50 chars" nodeset="/data/section_1/FRS_incident_num" required="true()" type="string"/>
+			<bind nodeset="/data/section_1/selected_fire_and_rescue_service" required="true()" type="string"/>
+			<bind nodeset="/data/section_1/selected_station" required="false()" type="string"/>
+			<bind constraint="string-length(.) &lt;= 50" jr:constraintMsg="Must be between 1 - 50 chars" nodeset="/data/section_1/fire_officer_id" required="false()" type="string"/>
+			<bind nodeset="/data/section_1/selected_over_the_border" required="true()" type="string"/>
+			<bind calculate="if ( /data/section_1/selected_over_the_border  = 'no',  /data/section_1/selected_fire_and_rescue_service ,'')" nodeset="/data/section_1/selected_frs_incident_location" required="true()" type="string"/>
+			<bind constraint="string-length(.) &lt;= 50" jr:constraintMsg="Must be between 1 - 50 chars" nodeset="/data/section_1/other_frs_incident_num" required="true()" type="string"/>
+			<bind nodeset="/data/section_2/time_date_of_call" required="true()" type="dateTime"/>
+			<bind nodeset="/data/section_2/origin_of_call" required="true()" type="string"/>
+			<bind nodeset="/data/section_2/incident_type" required="true()" type="int"/>
+			<bind nodeset="/data/section_2/stop_msg_time_date" required="true()" type="dateTime"/>
+			<bind nodeset="/data/section_2/incident_closed_time_date" required="true()" type="dateTime"/>
+			<bind nodeset="/data/section_3/selected_what_incident" required="true()" type="string"/>
+			<bind nodeset="/data/section_3/property_involved" required="true()" type="int"/>
+			<bind nodeset="/data/section_3/false_alarm_reason" relevant=" /data/section_3/selected_what_incident  = 'false_alarm'" required="true()" type="int"/>
+			<bind nodeset="/data/section_3/selected_attack_on_frs" required="true()" type="string"/>
+			<bind nodeset="/data/section_4/location_addressable" required="true()" type="string"/>
+			<bind constraint="regex(., '^[0-9]{7}$')" jr:constraintMsg="Must Be 7 Digits" nodeset="/data/section_4/x_coord" relevant=" /data/section_4/location_addressable  = 'yes'" required="true()" type="string"/>
+			<bind constraint="regex(., '^[0-9]{7}$')" jr:constraintMsg="Must Be 7 Digits" nodeset="/data/section_4/y_coord" relevant=" /data/section_4/location_addressable  = 'yes'" required="true()" type="string"/>
+			<bind constraint=".&lt;=999" jr:constraintMsg="Value must be between 0 - 999" nodeset="/data/section_6/num_of_officers" required="true()" type="int"/>
+			<bind nodeset="/data/section_6/selected_frs_vehicle_type" required="true()" type="string"/>
+			<bind constraint="string-length(.) &lt;= 50" jr:constraintMsg="Must be between 1 - 50 chars" nodeset="/data/section_6/callsign" required="true()" type="string"/>
+			<bind constraint=".&lt;= 20" jr:constraintMsg="Values must be between 0 - 20" nodeset="/data/section_6/num_of_crew" required="true()" type="int"/>
+			<bind nodeset="/data/section_6/selected_vehicle_dismount_used" required="true()" type="string"/>
+			<bind nodeset="/data/section_6/time_mobilized" type="dateTime"/>
+			<bind nodeset="/data/section_6/time_mobile" type="dateTime"/>
+			<bind nodeset="/data/section_6/time_arrived" required="true()" type="dateTime"/>
+			<bind nodeset="/data/section_6/time_available" required="true()" type="dateTime"/>
+			<bind nodeset="/data/section_6/selected_deployed_from" required="true()" type="string"/>
+			<bind calculate="if ( /data/section_3/selected_what_incident  = 'false_alarm', 'no','')" nodeset="/data/section_6/selected_equipment_used" required="true()" type="string"/>
+			<bind nodeset="/data/section_10/selected_current_incident_report_status" required="true()" type="string"/>
+			<bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+		</model>
+	</h:head>
+	<h:body>
+		<group ref="/data/section_1">
+			<label>Incident Identify</label>
+			<input ref="/data/section_1/FRS_incident_num">
+				<label>FRS Incident Number</label>
+			</input>
+			<select1 appearance="minimal" ref="/data/section_1/selected_fire_and_rescue_service">
+				<label>Fire and Rescure Service</label>
+				<item>
+					<label>s1</label>
+					<value>s1</value>
+				</item>
+				<item>
+					<label>s2</label>
+					<value>s2</value>
+				</item>
+				<item>
+					<label>s3</label>
+					<value>s3</value>
+				</item>
+			</select1>
+			<select1 appearance="minimal" ref="/data/section_1/selected_station">
+				<label>Station</label>
+				<item>
+					<label>ABCDE</label>
+					<value>abcde</value>
+				</item>
+				<item>
+					<label>FGHIJ</label>
+					<value>fghij</value>
+				</item>
+				<item>
+					<label>KlMNO</label>
+					<value>kimno</value>
+				</item>
+			</select1>
+			<input ref="/data/section_1/fire_officer_id">
+				<label>Fire Officer ID</label>
+			</input>
+			<select1 ref="/data/section_1/selected_over_the_border">
+				<label>Was this incident an 'over the border' incident?</label>
+				<item>
+					<label>Yes</label>
+					<value>yes</value>
+				</item>
+				<item>
+					<label>No</label>
+					<value>no</value>
+				</item>
+			</select1>
+			<select1 appearance="minimal" ref="/data/section_1/selected_frs_incident_location">
+				<label>In which FRS was the incident</label>
+				<itemset nodeset="instance('fire_and_rescue_service')/root/item[if( /data/section_1/selected_over_the_border  = 'no', (selected( /data/section_1/selected_fire_and_rescue_service ,name)),over_the_border= /data/section_1/selected_over_the_border )]">
+					<value ref="name"/>
+					<label ref="label"/>
+				</itemset>
+			</select1>
+			<input ref="/data/section_1/other_frs_incident_num">
+				<label>What is the other FRS incident number?</label>
+			</input>
+		</group>
+		<group ref="/data/section_2">
+			<label>At Call</label>
+			<input ref="/data/section_2/time_date_of_call">
+				<label>What was the time and date of the call?</label>
+			</input>
+			<select1 appearance="minimal" ref="/data/section_2/origin_of_call">
+				<label>What was the origin of this call?</label>
+				<item>
+					<label>o1</label>
+					<value>o1</value>
+				</item>
+				<item>
+					<label>o2</label>
+					<value>o2</value>
+				</item>
+				<item>
+					<label>o3</label>
+					<value>o3</value>
+				</item>
+			</select1>
+			<input ref="/data/section_2/incident_type">
+				<label>What was the incident type when the call was received by the control room?</label>
+			</input>
+			<input ref="/data/section_2/stop_msg_time_date">
+				<label>Time /Date of Stop Message?</label>
+			</input>
+			<input ref="/data/section_2/incident_closed_time_date">
+				<label>Time/Date incident closed ?</label>
+			</input>
+		</group>
+		<group ref="/data/section_3">
+			<label>On Attendance</label>
+			<select1 appearance="minimal" ref="/data/section_3/selected_what_incident">
+				<label>Please indicate if the incident is a Fire, Special Service, or False Alarm Incident:</label>
+				<item>
+					<label>Fire</label>
+					<value>fire</value>
+				</item>
+				<item>
+					<label>Special Service</label>
+					<value>special_service</value>
+				</item>
+				<item>
+					<label>False Alarm</label>
+					<value>false_alarm</value>
+				</item>
+			</select1>
+			<input ref="/data/section_3/property_involved">
+				<label>What type of Property was involved?</label>
+			</input>
+			<input ref="/data/section_3/false_alarm_reason">
+				<label>What was the reason for the False Alarm?</label>
+			</input>
+			<select1 ref="/data/section_3/selected_attack_on_frs">
+				<label>Was there an attack on FRS Personnel at the incident?</label>
+				<item>
+					<label>Yes</label>
+					<value>yes</value>
+				</item>
+				<item>
+					<label>No</label>
+					<value>no</value>
+				</item>
+			</select1>
+		</group>
+		<group ref="/data/section_4">
+			<label>Location</label>
+			<select1 ref="/data/section_4/location_addressable">
+				<label>Did the incident occur at the addressable location?</label>
+				<item>
+					<label>Yes</label>
+					<value>yes</value>
+				</item>
+				<item>
+					<label>No</label>
+					<value>no</value>
+				</item>
+			</select1>
+			<input appearance="number" ref="/data/section_4/x_coord">
+				<label>X-coordinate</label>
+			</input>
+			<input appearance="number" ref="/data/section_4/y_coord">
+				<label>Y-coordinate</label>
+			</input>
+		</group>
+		<group ref="/data/section_6">
+			<label>Resources Used</label>
+			<input ref="/data/section_6/num_of_officers">
+				<label>How many officers (non-rider) attended the incident that did not travel on the FRS appliance(s)?</label>
+			</input>
+			<select1 appearance="minimal" ref="/data/section_6/selected_frs_vehicle_type">
+				<label>Type of FRS Vehicle</label>
+				<item>
+					<label>VH1</label>
+					<value>vh1</value>
+				</item>
+				<item>
+					<label>VH2</label>
+					<value>vh2</value>
+				</item>
+				<item>
+					<label>VH3</label>
+					<value>vh3</value>
+				</item>
+			</select1>
+			<input ref="/data/section_6/callsign">
+				<label>Callsign (FRS and/or RCC callsign)</label>
+			</input>
+			<input ref="/data/section_6/num_of_crew">
+				<label>How many crew were dispatched with the vehicle?</label>
+			</input>
+			<select1 ref="/data/section_6/selected_vehicle_dismount_used">
+				<label>Did the vehicle demount a resource for use at the scene (e.g. a pod)?</label>
+				<item>
+					<label>Yes</label>
+					<value>yes</value>
+				</item>
+				<item>
+					<label>No</label>
+					<value>no</value>
+				</item>
+			</select1>
+			<input ref="/data/section_6/time_mobilized">
+				<label>What time was the appliance mobilized?</label>
+			</input>
+			<input ref="/data/section_6/time_mobile">
+				<label>What time was the appliance mobile?</label>
+			</input>
+			<input ref="/data/section_6/time_arrived">
+				<label>What time did the appliance arrive at the scene?</label>
+			</input>
+			<input ref="/data/section_6/time_available">
+				<label>What time was the appliance available ?</label>
+			</input>
+			<select1 ref="/data/section_6/selected_deployed_from">
+				<label>Where was the appliance deployed from?</label>
+				<item>
+					<label>Home Station</label>
+					<value>home_station</value>
+				</item>
+				<item>
+					<label>Other Station</label>
+					<value>other_station</value>
+				</item>
+				<item>
+					<label>Other Location</label>
+					<value>other_location</value>
+				</item>
+			</select1>
+			<select1 ref="/data/section_6/selected_equipment_used">
+				<label>Was any equipment used at the incident?</label>
+				<item>
+					<label>Yes</label>
+					<value>yes</value>
+				</item>
+				<item>
+					<label>No</label>
+					<value>no</value>
+				</item>
+			</select1>
+		</group>
+		<group ref="/data/section_10">
+			<label>Summary</label>
+			<select1 ref="/data/section_10/selected_current_incident_report_status">
+				<label>What is the current status of the incident report?</label>
+				<item>
+					<label>RS1</label>
+					<value>rs1</value>
+				</item>
+				<item>
+					<label>RS2</label>
+					<value>rs2</value>
+				</item>
+				<item>
+					<label>RS3</label>
+					<value>rs3</value>
+				</item>
+			</select1>
+		</group>
+	</h:body>
+</h:html>
